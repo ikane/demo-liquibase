@@ -1,0 +1,1 @@
+insert into language (iso_code,name) values ('fr','French');

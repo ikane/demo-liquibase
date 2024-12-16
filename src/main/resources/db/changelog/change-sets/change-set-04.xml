@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+  <changeSet id="1733506651661-1" author="ikane">
+    <addColumn tableName="translation">
+      <column name="language_id" type="BIGINT"/>
+    </addColumn>
+  </changeSet>
+
+  <changeSet id="1733506651661-2" author="ikane">
+    <addForeignKeyConstraint baseColumnNames="language_id"
+                             baseTableName="translation"
+                             constraintName="fk_translation_language_id"
+                             referencedColumnNames="id"
+                             referencedTableName="language"/>
+  </changeSet>
+
+</databaseChangeLog>

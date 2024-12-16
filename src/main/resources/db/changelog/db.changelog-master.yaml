@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: change-sets/change-set-01.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: change-sets/change-set-02.sql
+      relativeToChangelogFile: true
+  - include:
+      file: change-sets/change-set-03.xml
+      relativeToChangelogFile: true
+  - include:
+      file: change-sets/change-set-04.xml
+      relativeToChangelogFile: true
+  - include:
+      file: change-sets/change-set-05.xml
+      relativeToChangelogFile: true
